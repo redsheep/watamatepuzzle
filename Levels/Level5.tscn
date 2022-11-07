@@ -1,0 +1,110 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Levels/Level.gd" type="Script" id=1]
+[ext_resource path="res://Actors/SheepA.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Component/Box.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Actors/SheepB.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Component/ModalSuccess.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Component/Stage.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Component/Backgroud.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Images/star.png" type="Texture" id=8]
+[ext_resource path="res://Actors/SheepC.tscn" type="PackedScene" id=9]
+
+[sub_resource type="Curve" id=1]
+_data = [ Vector2( 0, 0.261364 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=6]
+curve = SubResource( 1 )
+
+[sub_resource type="ParticlesMaterial" id=3]
+lifetime_randomness = 0.22
+emission_shape = 1
+emission_sphere_radius = 0.01
+flag_disable_z = true
+direction = Vector3( 1, 1, 0 )
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 120.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+angle = 171.1
+angle_random = 0.91
+scale = 3.0
+scale_random = 1.0
+scale_curve = SubResource( 6 )
+color = Color( 1, 1, 1, 0.380392 )
+hue_variation = 0.38
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+Level = 5
+
+[node name="Backgroud" parent="." instance=ExtResource( 7 )]
+
+[node name="SnapTween" type="Tween" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+
+[node name="Board" parent="." instance=ExtResource( 6 )]
+scale = Vector2( 3, 2.5 )
+
+[node name="Particles2D" type="Particles2D" parent="."]
+z_index = 101
+emitting = false
+amount = 10
+lifetime = 1.2
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource( 3 )
+texture = ExtResource( 8 )
+
+[node name="ModalSuccess" parent="." instance=ExtResource( 5 )]
+
+[node name="Boxes" type="Node" parent="."]
+
+[node name="Node2D2" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( -32, 0 )
+
+[node name="Node2D3" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( -96, 0 )
+
+[node name="Node2D4" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( 32, 0 )
+
+[node name="Node2D5" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( -32, 64 )
+
+[node name="Node2D6" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( -32, -64 )
+
+[node name="Node2D7" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( -96, -64 )
+
+[node name="Node2D8" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( 96, -64 )
+
+[node name="Node2D9" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( 96, 64 )
+
+[node name="Node2D10" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( 96, 0 )
+
+[node name="Actors" type="Node" parent="."]
+
+[node name="Sheep1" parent="Actors" instance=ExtResource( 2 )]
+position = Vector2( 304, 96 )
+z_index = 99
+
+[node name="Sheep2" parent="Actors" instance=ExtResource( 4 )]
+position = Vector2( 298, -109 )
+
+[node name="Node2D" parent="Actors" instance=ExtResource( 9 )]
+position = Vector2( -332, 84 )
+
+[node name="Node2D2" parent="Actors" instance=ExtResource( 9 )]
+position = Vector2( -327, -103 )
+
+[connection signal="button_reset_pressed" from="Backgroud" to="." method="_on_Backgroud_button_reset_pressed"]
+[connection signal="button_return_pressed" from="Backgroud" to="." method="_on_Backgroud_button_return_pressed"]
+[connection signal="button_next_pressed" from="ModalSuccess" to="." method="_on_ModalSuccess_button_next_pressed"]

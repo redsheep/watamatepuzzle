@@ -1,0 +1,52 @@
+[gd_resource type="Theme" load_steps=10 format=2]
+
+[ext_resource path="res://Skins/new_dynamicfont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Skins/bg_hover_color.tres" type="StyleBox" id=2]
+[ext_resource path="res://Skins/bg_normal_color.tres" type="StyleBox" id=3]
+[ext_resource path="res://Skins/bg_press_color.tres" type="StyleBox" id=4]
+[ext_resource path="res://Skins/bg_panel_color.tres" type="StyleBox" id=5]
+[ext_resource path="res://Images/slider_bar.png" type="Texture" id=6]
+[ext_resource path="res://Skins/label_dynamicfont.tres" type="DynamicFont" id=7]
+[ext_resource path="res://Skins/bg_transparent.tres" type="StyleBox" id=8]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 32, 32 )
+
+[resource]
+Button/colors/font_color = Color( 1, 1, 1, 1 )
+Button/colors/font_color_focus = Color( 1, 1, 1, 1 )
+Button/colors/font_color_hover = Color( 0, 0, 0, 1 )
+Button/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+Button/fonts/font = ExtResource( 1 )
+Button/styles/hover = ExtResource( 2 )
+Button/styles/normal = ExtResource( 3 )
+Button/styles/pressed = ExtResource( 4 )
+CheckBox/icons/unchecked = null
+CheckBox/styles/focus = ExtResource( 8 )
+CheckBox/styles/hover = ExtResource( 8 )
+CheckBox/styles/hover_pressed = ExtResource( 8 )
+CheckBox/styles/normal = ExtResource( 8 )
+CheckBox/styles/pressed = ExtResource( 8 )
+CheckButton/styles/focus = ExtResource( 8 )
+CheckButton/styles/hover = ExtResource( 8 )
+CheckButton/styles/hover_pressed = ExtResource( 8 )
+CheckButton/styles/normal = ExtResource( 8 )
+CheckButton/styles/pressed = ExtResource( 8 )
+GridContainer/constants/hseparation = 10
+GridContainer/constants/vseparation = 10
+HSlider/styles/grabber_area = ExtResource( 3 )
+HSlider/styles/grabber_area_highlight = ExtResource( 4 )
+HSlider/styles/slider = SubResource( 1 )
+ItemList/fonts/font = ExtResource( 1 )
+Label/colors/font_color = Color( 1, 1, 1, 1 )
+Label/colors/font_color_shadow = Color( 0, 0, 0, 0 )
+Label/colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+Label/constants/line_spacing = 3
+Label/constants/shadow_as_outline = 0
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/fonts/font = ExtResource( 7 )
+Label/styles/normal = null
+Panel/styles/panel = ExtResource( 5 )
+VBoxContainer/constants/separation = 32

@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Skins/new_theme.tres" type="Theme" id=1]
+[ext_resource path="res://Images/locked.png" type="Texture" id=2]
+[ext_resource path="res://Images/ribon.png" type="Texture" id=3]
+[ext_resource path="res://Component/LevelCell.gd" type="Script" id=4]
+[ext_resource path="res://Images/bg_button_normal.png" type="Texture" id=5]
+[ext_resource path="res://Skins/sheep_theme.tres" type="Theme" id=6]
+
+[node name="LevelCell" type="TextureButton"]
+margin_right = 135.0
+margin_bottom = 137.0
+rect_pivot_offset = Vector2( 73, 69 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 1 )
+texture_normal = ExtResource( 5 )
+expand = true
+script = ExtResource( 4 )
+
+[node name="Locked" type="Sprite" parent="."]
+visible = false
+position = Vector2( 74, 73 )
+scale = Vector2( 0.52, 0.524444 )
+texture = ExtResource( 2 )
+
+[node name="Ribon" type="Sprite" parent="."]
+visible = false
+position = Vector2( 93, 35 )
+scale = Vector2( 0.238506, 0.270588 )
+texture = ExtResource( 3 )
+flip_h = true
+
+[node name="Label" type="Label" parent="."]
+margin_left = 33.0
+margin_top = 32.0
+margin_right = 99.0
+margin_bottom = 96.0
+theme = ExtResource( 6 )
+text = "0"
+align = 1
+
+[connection signal="mouse_entered" from="." to="." method="_on_LevelCell_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_LevelCell_mouse_exited"]
+[connection signal="pressed" from="." to="." method="_on_LevelCell_pressed"]

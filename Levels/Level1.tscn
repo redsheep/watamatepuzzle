@@ -1,0 +1,81 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Levels/Level.gd" type="Script" id=1]
+[ext_resource path="res://Images/star.png" type="Texture" id=2]
+[ext_resource path="res://Component/Box.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Actors/SheepA.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Component/ModalSuccess.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Component/Stage.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Component/Backgroud.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Component/DescPanel.tscn" type="PackedScene" id=8]
+
+[sub_resource type="Curve" id=1]
+_data = [ Vector2( 0, 0.261364 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=6]
+curve = SubResource( 1 )
+
+[sub_resource type="ParticlesMaterial" id=3]
+lifetime_randomness = 0.22
+emission_shape = 1
+emission_sphere_radius = 0.01
+flag_disable_z = true
+direction = Vector3( 1, 1, 0 )
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 120.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+angle = 171.1
+angle_random = 0.91
+scale = 3.0
+scale_random = 1.0
+scale_curve = SubResource( 6 )
+color = Color( 1, 1, 1, 0.380392 )
+hue_variation = 0.38
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+Level = 1
+
+[node name="Backgroud" parent="." instance=ExtResource( 7 )]
+level = 1
+
+[node name="SnapTween" type="Tween" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+
+[node name="Board" parent="." instance=ExtResource( 6 )]
+scale = Vector2( 2, 2 )
+
+[node name="Boxes" type="Node" parent="."]
+
+[node name="Node2D2" parent="Boxes" instance=ExtResource( 3 )]
+
+[node name="Actors" type="Node2D" parent="."]
+
+[node name="Sheep" parent="Actors" instance=ExtResource( 4 )]
+position = Vector2( 286, 0 )
+
+[node name="Particles2D" type="Particles2D" parent="."]
+z_index = 101
+emitting = false
+amount = 10
+lifetime = 1.2
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource( 3 )
+texture = ExtResource( 2 )
+
+[node name="ModalSuccess" parent="." instance=ExtResource( 5 )]
+
+[node name="panelNewActor" parent="." instance=ExtResource( 8 )]
+position = Vector2( 0, -1280 )
+actor = "SheepA"
+
+[connection signal="button_reset_pressed" from="Backgroud" to="." method="_on_Backgroud_button_reset_pressed"]
+[connection signal="button_return_pressed" from="Backgroud" to="." method="_on_Backgroud_button_return_pressed"]
+[connection signal="button_next_pressed" from="ModalSuccess" to="." method="_on_ModalSuccess_button_next_pressed"]
+[connection signal="button_exit_pressed" from="panelNewActor" to="." method="_on_panelNewActor_button_exit_pressed"]
+[connection signal="tree_entered" from="panelNewActor" to="." method="_on_panelNewActor_tree_entered"]

@@ -1,0 +1,171 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Skins/large_font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Images/japanese.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Options.gd" type="Script" id=3]
+[ext_resource path="res://Skins/sheep_theme.tres" type="Theme" id=4]
+[ext_resource path="res://Images/English.png" type="Texture" id=5]
+[ext_resource path="res://Images/chinese.png" type="Texture" id=6]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = 666.0
+margin_top = 170.0
+margin_right = 1360.0
+margin_bottom = 856.0
+theme = ExtResource( 4 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+margin_left = 80.0
+margin_top = 53.0
+margin_right = 634.0
+margin_bottom = 615.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 4 )
+
+[node name="Label_Title" type="Label" parent="Panel/VBoxContainer"]
+margin_right = 554.0
+margin_bottom = 64.0
+theme = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "KEY_OPTION"
+align = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer"]
+margin_top = 94.0
+margin_right = 554.0
+margin_bottom = 158.0
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer"]
+margin_right = 275.0
+margin_bottom = 64.0
+size_flags_horizontal = 3
+theme = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "KEY_MUSIC"
+align = 1
+
+[node name="HSlider" type="HSlider" parent="Panel/VBoxContainer/HBoxContainer"]
+margin_left = 279.0
+margin_right = 554.0
+margin_bottom = 64.0
+size_flags_horizontal = 3
+theme = ExtResource( 4 )
+max_value = 10.0
+value = 5.0
+scrollable = false
+ticks_on_borders = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/VBoxContainer"]
+margin_top = 188.0
+margin_right = 554.0
+margin_bottom = 252.0
+
+[node name="Label2" type="Label" parent="Panel/VBoxContainer/HBoxContainer2"]
+margin_right = 286.0
+margin_bottom = 64.0
+size_flags_horizontal = 3
+theme = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "KEY_SOUND"
+align = 1
+
+[node name="HSlider2" type="HSlider" parent="Panel/VBoxContainer/HBoxContainer2"]
+margin_left = 290.0
+margin_right = 554.0
+margin_bottom = 64.0
+size_flags_horizontal = 3
+theme = ExtResource( 4 )
+max_value = 10.0
+value = 5.0
+scrollable = false
+ticks_on_borders = true
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Panel/VBoxContainer"]
+margin_top = 282.0
+margin_right = 554.0
+margin_bottom = 346.0
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer3"]
+margin_right = 287.0
+margin_bottom = 64.0
+size_flags_horizontal = 3
+theme = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "KEY_FCREEN"
+align = 1
+valign = 1
+
+[node name="CheckBox" type="CheckBox" parent="Panel/VBoxContainer/HBoxContainer3"]
+margin_left = 291.0
+margin_right = 554.0
+margin_bottom = 64.0
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme = ExtResource( 4 )
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="Panel/VBoxContainer"]
+margin_top = 376.0
+margin_right = 554.0
+margin_bottom = 440.0
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer4"]
+margin_right = 286.0
+margin_bottom = 64.0
+size_flags_horizontal = 3
+theme = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "KEY_LOCALE"
+align = 1
+valign = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer/HBoxContainer4"]
+margin_left = 290.0
+margin_right = 554.0
+margin_bottom = 64.0
+size_flags_horizontal = 3
+
+[node name="ButtonJP" type="TextureButton" parent="Panel/VBoxContainer/HBoxContainer4/HBoxContainer"]
+margin_right = 85.0
+margin_bottom = 64.0
+size_flags_horizontal = 3
+texture_normal = ExtResource( 2 )
+expand = true
+stretch_mode = 5
+
+[node name="ButtonEN" type="TextureButton" parent="Panel/VBoxContainer/HBoxContainer4/HBoxContainer"]
+margin_left = 89.0
+margin_right = 174.0
+margin_bottom = 64.0
+size_flags_horizontal = 3
+texture_normal = ExtResource( 5 )
+expand = true
+stretch_mode = 5
+
+[node name="ButtonCN" type="TextureButton" parent="Panel/VBoxContainer/HBoxContainer4/HBoxContainer"]
+margin_left = 178.0
+margin_right = 264.0
+margin_bottom = 64.0
+size_flags_horizontal = 3
+texture_normal = ExtResource( 6 )
+expand = true
+stretch_mode = 5
+
+[node name="Button" type="Button" parent="Panel/VBoxContainer"]
+margin_top = 470.0
+margin_right = 554.0
+margin_bottom = 571.0
+custom_fonts/font = ExtResource( 1 )
+text = "KEY_OK"
+
+[connection signal="tree_entered" from="." to="." method="_on_Node2D_tree_entered"]
+[connection signal="value_changed" from="Panel/VBoxContainer/HBoxContainer/HSlider" to="." method="_on_HSlider_value_changed"]
+[connection signal="value_changed" from="Panel/VBoxContainer/HBoxContainer2/HSlider2" to="." method="_on_HSlider2_value_changed"]
+[connection signal="toggled" from="Panel/VBoxContainer/HBoxContainer3/CheckBox" to="." method="_on_CheckBox_toggled"]
+[connection signal="pressed" from="Panel/VBoxContainer/HBoxContainer4/HBoxContainer/ButtonJP" to="." method="_on_ButtonJP_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/HBoxContainer4/HBoxContainer/ButtonEN" to="." method="_on_ButtonEN_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/HBoxContainer4/HBoxContainer/ButtonCN" to="." method="_on_ButtonCN_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Button" to="." method="_on_Button_pressed"]

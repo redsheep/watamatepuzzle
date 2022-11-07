@@ -1,0 +1,28 @@
+keys,en_US,ja_JP,zh_CN
+KEY_SUBTITLE,Ensemble,合奏編,合奏篇
+KEY_PLAY,Play,プレー,开始
+KEY_MEMBER,WataMates,ワタメイト,绵友集
+KEY_OPTION,Settings,設定,设定
+KEY_QUIT,Quit,終了,结束
+KEY_MUSIC,Music,音楽,音乐
+KEY_SOUND,SE,効果音,音效
+KEY_FCREEN,Fullscreen,全画面表示,全屏
+KEY_OK,OK,オーケー,确定
+KEY_LOCALE,Language,言語,语言
+KEY_WELCOME_TITLE,new member join in,新メンバー参加,新绵友参加
+KEY_WELCOME_OK,welcome to membersheep,おはようメンバーシープ,欢迎新绵友加入
+KEY_TITLE_SHEEPA,newcomer,初見さん,新人
+KEY_TITLE_SHEEPB,fan,応援団員,应援团员
+KEY_TITLE_SHEEPC,flute,フルート,长笛
+KEY_TITLE_SHEEPD,cello,チェロ,大提琴
+KEY_TITLE_SHEEPE,cornet,コルネット,短号
+KEY_TITLE_SHEEPF,saxophone,サックス,萨克斯
+KEY_TITLE_SHEEPG,drum,ドラム,爵士鼓
+KEY_TITLE_SHEEPH,congo,コンガドラム,康加鼓
+KEY_TITLE_SHEEPI,guitar,ギター,吉他
+KEY_TITLE_SHEEPJ,marimba,マリンバ,木琴
+KEY_TITLE_SHEEPK,piano,ピアノ,钢琴
+KEY_TITLE_SHEEPL,Staff,スタッフ,助手
+KEY_TITLE_SHEEPM,DJ,ディージェー,调音台
+KEY_TITLE_SHEEPN,violin,バイオリン,小提琴
+

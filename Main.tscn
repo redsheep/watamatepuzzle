@@ -1,0 +1,251 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Images/main_title.png" type="Texture" id=1]
+[ext_resource path="res://Skins/sheep_theme.tres" type="Theme" id=2]
+[ext_resource path="res://Main.gd" type="Script" id=3]
+[ext_resource path="res://Skins/large_font.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Component/SEButton.gd" type="Script" id=6]
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("CanvasModulate:color:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("CanvasModulate:color:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("CanvasModulate:color:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("CanvasModulate:color:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("MainTitle:scale:x")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 1.48258, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("MainTitle:scale:y")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( 1.5377, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("LabelTitle:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/7/type = "bezier"
+tracks/7/path = NodePath("LabelTitle:rect_rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "fade_in"
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("CanvasModulate:color:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.9 )
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "start_anim"
+length = 2.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("MainTitle:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1.65, -0.25, 0, 0.25, 0, 1.48258, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.8, 1.2 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("MainTitle:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1.6, -0.25, 0, 0.25, 0, 1.5377, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.8, 1.2 )
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("LabelTitle:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("LabelTitle:rect_rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 360, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 1.1, 1.6 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("CanvasModulate:color:a")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1.2 )
+}
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( 1048, 552 )
+script = ExtResource( 3 )
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 1 )
+anims/fade_in = SubResource( 3 )
+anims/start_anim = SubResource( 2 )
+
+[node name="BtnQuit" type="Button" parent="."]
+margin_left = -336.0
+margin_top = 376.0
+margin_right = 336.0
+margin_bottom = 536.0
+theme = ExtResource( 2 )
+custom_fonts/font = ExtResource( 4 )
+text = "KEY_QUIT"
+script = ExtResource( 6 )
+
+[node name="Polygon2D5" type="Polygon2D" parent="."]
+position = Vector2( -336, 392 )
+color = Color( 0.392157, 0.388235, 0.388235, 0.654902 )
+polygon = PoolVector2Array( 584, -32, 96, -32, 56, -16, 80, 8, 592, 8, 616, -16 )
+
+[node name="BtnOption" type="Button" parent="."]
+margin_left = -336.0
+margin_top = 240.0
+margin_right = 336.0
+margin_bottom = 392.0
+theme = ExtResource( 2 )
+custom_fonts/font = ExtResource( 4 )
+text = "KEY_OPTION"
+script = ExtResource( 6 )
+
+[node name="Polygon2D4" type="Polygon2D" parent="."]
+position = Vector2( -304, 256 )
+color = Color( 0.392157, 0.388235, 0.388235, 0.654902 )
+polygon = PoolVector2Array( 584, -32, 32, -32, 16, -16, 32, 8, 584, 8, 600, -16 )
+
+[node name="BtnMember" type="Button" parent="."]
+margin_left = -336.0
+margin_top = 112.0
+margin_right = 336.0
+margin_bottom = 256.0
+theme = ExtResource( 2 )
+custom_fonts/font = ExtResource( 4 )
+text = "KEY_MEMBER"
+script = ExtResource( 6 )
+
+[node name="Polygon2D3" type="Polygon2D" parent="."]
+position = Vector2( -360, 128 )
+scale = Vector2( 1.12, 1 )
+color = Color( 0.392157, 0.388235, 0.388235, 0.654902 )
+polygon = PoolVector2Array( 536, -32, 96, -32, 71.4286, -16, 92.8572, 8, 557.143, 8, 568, -16 )
+
+[node name="BtnPlay" type="Button" parent="."]
+margin_left = -336.0
+margin_top = -32.0
+margin_right = 336.0
+margin_bottom = 128.0
+theme = ExtResource( 2 )
+custom_fonts/font = ExtResource( 4 )
+text = "KEY_PLAY"
+script = ExtResource( 6 )
+
+[node name="LabelTitle" type="Label" parent="."]
+visible = false
+margin_left = 253.0
+margin_top = -190.0
+margin_right = 680.0
+margin_bottom = -105.0
+rect_scale = Vector2( 0.6, 0.6 )
+rect_pivot_offset = Vector2( 100, 45 )
+theme = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "KEY_SUBTITLE"
+
+[node name="MainTitle" type="Sprite" parent="."]
+position = Vector2( -44, -308 )
+scale = Vector2( 1.48258, 1.5377 )
+texture = ExtResource( 1 )
+
+[connection signal="pressed" from="BtnQuit" to="." method="_on_BtnQuit_pressed"]
+[connection signal="pressed" from="BtnOption" to="." method="_on_BtnOption_pressed"]
+[connection signal="pressed" from="BtnMember" to="." method="_on_BtnMember_pressed"]
+[connection signal="pressed" from="BtnPlay" to="." method="_on_BtnPlay_pressed"]

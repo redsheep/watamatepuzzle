@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Images/run-cm.png" type="Texture" id=1]
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 128, 64 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 128, 0, 128, 64 )
+
+[sub_resource type="SpriteFrames" id=7]
+animations = [ {
+"frames": [ SubResource( 5 ), SubResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( -128, 0 )
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2( -1288, -80 )
+polygon = PoolVector2Array( 1368, 0, 1368, 128, 2768, 264, 2768, -176 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 128, 0 )
+scale = Vector2( 2.20313, 3.1875 )
+z_index = 9
+frames = SubResource( 7 )
+frame = 1
+speed_scale = 2.0
+playing = true

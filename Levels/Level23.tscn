@@ -1,0 +1,235 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Levels/Level.gd" type="Script" id=1]
+[ext_resource path="res://Actors/SheepG.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Component/Box.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Actors/SheepI.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Component/ModalSuccess.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Component/Stage.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Component/Backgroud.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Images/star.png" type="Texture" id=8]
+[ext_resource path="res://Actors/SheepM.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Actors/SheepC.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Actors/SheepK.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Actors/SheepF.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Actors/SheepJ.tscn" type="PackedScene" id=13]
+
+[sub_resource type="Curve" id=1]
+_data = [ Vector2( 0, 0.261364 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=6]
+curve = SubResource( 1 )
+
+[sub_resource type="ParticlesMaterial" id=3]
+lifetime_randomness = 0.22
+emission_shape = 1
+emission_sphere_radius = 0.01
+flag_disable_z = true
+direction = Vector3( 1, 1, 0 )
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 120.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+angle = 171.1
+angle_random = 0.91
+scale = 3.0
+scale_random = 1.0
+scale_curve = SubResource( 6 )
+color = Color( 1, 1, 1, 0.380392 )
+hue_variation = 0.38
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+Level = 23
+
+[node name="Backgroud" parent="." instance=ExtResource( 7 )]
+
+[node name="SnapTween" type="Tween" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+
+[node name="Board" parent="." instance=ExtResource( 6 )]
+scale = Vector2( 4.5, 4.5 )
+
+[node name="Particles2D" type="Particles2D" parent="."]
+z_index = 101
+emitting = false
+amount = 10
+lifetime = 1.2
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource( 3 )
+texture = ExtResource( 8 )
+
+[node name="ModalSuccess" parent="." instance=ExtResource( 5 )]
+
+[node name="Boxes" type="Node" parent="."]
+
+[node name="Node2D3" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( 0, 128 )
+
+[node name="Node2D5" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( -128, -64 )
+
+[node name="Node2D7" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( -64, -64 )
+
+[node name="Node2D8" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( 64, 0 )
+
+[node name="Node2D10" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( 64, 192 )
+
+[node name="Node2D14" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( -128, 0 )
+
+[node name="Node2D11" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( 128, -128 )
+
+[node name="Node2D18" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( 128, -64 )
+
+[node name="Node2D19" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( -64, 128 )
+
+[node name="Node2D20" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( -192, -64 )
+
+[node name="Node2D4" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( 128, 128 )
+
+[node name="Node2D21" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( 0, -192 )
+
+[node name="Node2D22" parent="Boxes" instance=ExtResource( 3 )]
+
+[node name="Node2D23" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( 128, 0 )
+
+[node name="Node2D24" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( 0, -128 )
+
+[node name="Node2D25" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( 64, -192 )
+
+[node name="Node2D26" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( 64, 128 )
+
+[node name="Node2D28" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( 64, -128 )
+
+[node name="Node2D32" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( -192, 0 )
+
+[node name="Node2D36" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( -64, 0 )
+
+[node name="Node2D37" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( 128, -192 )
+
+[node name="Node2D38" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( -128, -128 )
+
+[node name="Node2D27" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( 64, -64 )
+
+[node name="Node2D34" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( 64, 64 )
+
+[node name="Node2D12" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( -64, 64 )
+
+[node name="Node2D35" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( 0, 64 )
+
+[node name="Node2D39" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( 0, -64 )
+
+[node name="Node2D6" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( -128, 64 )
+
+[node name="Node2D40" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( -64, -128 )
+
+[node name="Node2D42" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( 192, -64 )
+
+[node name="Node2D43" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( 192, 0 )
+
+[node name="Node2D44" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( 192, -128 )
+
+[node name="Node2D45" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( 192, 64 )
+
+[node name="Node2D46" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( 128, 64 )
+
+[node name="Node2D9" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( 0, 192 )
+
+[node name="Node2D29" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( -128, 128 )
+
+[node name="Node2D30" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( -128, -192 )
+
+[node name="Node2D41" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( -64, -192 )
+
+[node name="Node2D31" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( -192, 64 )
+
+[node name="Node2D33" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( -192, 128 )
+
+[node name="Node2D47" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( -192, 192 )
+
+[node name="Node2D48" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( 128, 192 )
+
+[node name="Node2D49" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( 192, 192 )
+
+[node name="Node2D50" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( 192, 128 )
+
+[node name="Node2D51" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( -192, -128 )
+
+[node name="Node2D52" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( -128, 192 )
+
+[node name="Node2D13" parent="Boxes" instance=ExtResource( 3 )]
+position = Vector2( 192, -192 )
+
+[node name="Actors" type="Node" parent="."]
+
+[node name="Node2D3" parent="Actors" instance=ExtResource( 4 )]
+position = Vector2( -512, -232 )
+
+[node name="Node2D6" parent="Actors" instance=ExtResource( 13 )]
+position = Vector2( 464, -104 )
+
+[node name="Node2D8" parent="Actors" instance=ExtResource( 9 )]
+position = Vector2( -472, -24 )
+
+[node name="Node2D2" parent="Actors" instance=ExtResource( 2 )]
+position = Vector2( -472, 240 )
+
+[node name="Node2D5" parent="Actors" instance=ExtResource( 11 )]
+position = Vector2( 488, 192 )
+
+[node name="Node2D" parent="Actors" instance=ExtResource( 10 )]
+position = Vector2( 360, -352 )
+
+[node name="Node2D4" parent="Actors" instance=ExtResource( 12 )]
+position = Vector2( -360, -392 )
+
+[connection signal="button_reset_pressed" from="Backgroud" to="." method="_on_Backgroud_button_reset_pressed"]
+[connection signal="button_return_pressed" from="Backgroud" to="." method="_on_Backgroud_button_return_pressed"]
+[connection signal="button_next_pressed" from="ModalSuccess" to="." method="_on_ModalSuccess_button_next_pressed"]

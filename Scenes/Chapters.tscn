@@ -1,0 +1,51 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scenes/Chapters.gd" type="Script" id=1]
+[ext_resource path="res://Chapters/Chapter1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Images/btnReturn.png" type="Texture" id=3]
+[ext_resource path="res://Chapters/Chapter3.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Chapters/Chapter2.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Images/btnNext2.png" type="Texture" id=7]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="Chapts" type="Node2D" parent="."]
+
+[node name="Chapt1" parent="Chapts" instance=ExtResource( 2 )]
+position = Vector2( 1040, 500 )
+
+[node name="Chapt2" parent="Chapts" instance=ExtResource( 5 )]
+position = Vector2( 2962, 495 )
+
+[node name="Chapt3" parent="Chapts" instance=ExtResource( 4 )]
+position = Vector2( 4880, 488 )
+
+[node name="BtnReturn" type="TextureButton" parent="."]
+margin_left = 128.0
+margin_top = 856.0
+margin_right = 224.0
+margin_bottom = 952.0
+texture_normal = ExtResource( 3 )
+
+[node name="BtnNext" type="TextureButton" parent="."]
+margin_left = 1416.0
+margin_top = 472.0
+margin_right = 1512.0
+margin_bottom = 568.0
+texture_normal = ExtResource( 7 )
+
+[node name="BtnPrev" type="TextureButton" parent="."]
+visible = false
+margin_left = 552.0
+margin_top = 472.0
+margin_right = 648.0
+margin_bottom = 568.0
+texture_normal = ExtResource( 7 )
+flip_h = true
+
+[connection signal="pressed" from="BtnReturn" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="BtnNext" to="." method="_on_BtnNext_pressed"]
+[connection signal="pressed" from="BtnPrev" to="." method="_on_BtnPrev_pressed"]

@@ -1,0 +1,128 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Skins/new_theme.tres" type="Theme" id=1]
+[ext_resource path="res://Chapters/Chapter.gd" type="Script" id=2]
+[ext_resource path="res://Skins/sheep_theme.tres" type="Theme" id=3]
+[ext_resource path="res://Component/LevelCell.tscn" type="PackedScene" id=4]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = -376.0
+margin_top = -360.0
+margin_right = 368.0
+margin_bottom = 352.0
+rect_pivot_offset = Vector2( 336, 312 )
+theme = ExtResource( 3 )
+
+[node name="GridContainer" type="GridContainer" parent="."]
+margin_left = -280.0
+margin_top = -288.0
+margin_right = 288.0
+margin_bottom = 288.0
+rect_pivot_offset = Vector2( 280, 288 )
+theme = ExtResource( 1 )
+columns = 4
+
+[node name="Button_Level_1" parent="GridContainer" instance=ExtResource( 4 )]
+level = 1
+
+[node name="Sperator_1" type="Label" parent="GridContainer"]
+margin_left = 145.0
+margin_top = 47.0
+margin_right = 280.0
+margin_bottom = 90.0
+theme = ExtResource( 1 )
+
+[node name="Sperator_2" type="Label" parent="GridContainer"]
+margin_left = 290.0
+margin_top = 47.0
+margin_right = 424.0
+margin_bottom = 90.0
+size_flags_horizontal = 3
+theme = ExtResource( 1 )
+
+[node name="Button_Level_2" parent="GridContainer" instance=ExtResource( 4 )]
+margin_left = 434.0
+margin_right = 568.0
+level = 2
+
+[node name="Button_Level_3" parent="GridContainer" instance=ExtResource( 4 )]
+margin_top = 147.0
+margin_bottom = 284.0
+level = 3
+
+[node name="Sperator_3" type="Label" parent="GridContainer"]
+margin_left = 145.0
+margin_top = 194.0
+margin_right = 280.0
+margin_bottom = 237.0
+theme = ExtResource( 1 )
+
+[node name="Sperator_4" type="Label" parent="GridContainer"]
+margin_left = 290.0
+margin_top = 194.0
+margin_right = 424.0
+margin_bottom = 237.0
+theme = ExtResource( 1 )
+
+[node name="Button_Level_4" parent="GridContainer" instance=ExtResource( 4 )]
+margin_left = 434.0
+margin_top = 147.0
+margin_right = 568.0
+margin_bottom = 284.0
+level = 4
+
+[node name="Button_Level_5" parent="GridContainer" instance=ExtResource( 4 )]
+margin_top = 294.0
+margin_bottom = 430.0
+level = 5
+
+[node name="Button_Level_6" parent="GridContainer" instance=ExtResource( 4 )]
+margin_left = 145.0
+margin_top = 294.0
+margin_right = 280.0
+margin_bottom = 430.0
+level = 6
+
+[node name="Button_Level_7" parent="GridContainer" instance=ExtResource( 4 )]
+margin_left = 290.0
+margin_top = 294.0
+margin_right = 424.0
+margin_bottom = 430.0
+level = 7
+
+[node name="Button_Level_8" parent="GridContainer" instance=ExtResource( 4 )]
+margin_left = 434.0
+margin_top = 294.0
+margin_right = 568.0
+margin_bottom = 430.0
+level = 8
+
+[node name="Sperator_5" type="Label" parent="GridContainer"]
+margin_top = 486.0
+margin_right = 135.0
+margin_bottom = 529.0
+theme = ExtResource( 1 )
+
+[node name="Button_Level_9" parent="GridContainer" instance=ExtResource( 4 )]
+margin_left = 145.0
+margin_top = 440.0
+margin_right = 280.0
+margin_bottom = 576.0
+level = 9
+
+[node name="Button_Level_10" parent="GridContainer" instance=ExtResource( 4 )]
+margin_left = 290.0
+margin_top = 440.0
+margin_right = 424.0
+margin_bottom = 576.0
+level = 10
+
+[node name="Sperator_6" type="Label" parent="GridContainer"]
+margin_left = 434.0
+margin_top = 486.0
+margin_right = 568.0
+margin_bottom = 529.0
+theme = ExtResource( 1 )

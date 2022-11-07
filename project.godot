@@ -1,0 +1,88 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Node",
+"class": "Chapter",
+"language": "GDScript",
+"path": "res://Chapters/Chapter.gd"
+}, {
+"base": "TextureButton",
+"class": "LevelCell",
+"language": "GDScript",
+"path": "res://Component/LevelCell.gd"
+} ]
+_global_script_class_icons={
+"Chapter": "",
+"LevelCell": ""
+}
+
+[application]
+
+config/name="Puzzle"
+run/main_scene="res://Main.tscn"
+boot_splash/image="res://Images/splash.png"
+config/icon="res://default_icon.png"
+
+[audio]
+
+default_bus_layout="res://Skins/default_bus_layout.tres"
+
+[autoload]
+
+GameData="*res://Global/game_data.tscn"
+GameSettings="*res://Global/game_settings.tscn"
+SceneTransition="*res://Global/scene_transition.tscn"
+AudioManager="*res://Global/audio_manager.tscn"
+
+[display]
+
+window/size/width=1960
+window/size/height=1080
+window/size/resizable=false
+window/per_pixel_transparency/allowed=true
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
+
+[gui]
+
+common/drop_mouse_on_gui_input_disabled=true
+
+[input]
+
+click={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+
+[input_devices]
+
+pointing/emulate_mouse_from_touch=false
+
+[layer_names]
+
+2d_physics/layer_1="Actor"
+2d_physics/layer_2="Stage"
+2d_physics/layer_3="Cell"
+
+[locale]
+
+test="ja_JP"
+locale_filter=[ 0, [ "en_US", "ja_JP", "zh_CN", "zh_TW" ] ]
+translations=PoolStringArray( "res://Locales/messages.ja_JP.translation", "res://Locales/messages.en_US.translation", "res://Locales/messages.zh_CN.translation" )
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"

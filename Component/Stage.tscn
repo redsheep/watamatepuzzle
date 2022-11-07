@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Images/sticker_x.png" type="Texture" id=1]
+[ext_resource path="res://Component/Stage.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 64, 64 )
+
+[node name="Node2D" type="Area2D"]
+collision_layer = 2
+script = ExtResource( 2 )
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2( 5, 3 )
+color = Color( 0.556863, 0.556863, 0.556863, 1 )
+polygon = PoolVector2Array( -64, -64, 64, -64, 64, 64, -64, 64 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+margin_left = -160.0
+margin_top = -160.0
+margin_right = 160.0
+margin_bottom = 160.0
+rect_scale = Vector2( 0.5, 0.5 )
+rect_pivot_offset = Vector2( 160, 160 )
+input_pass_on_modal_close_click = false
+texture = ExtResource( 1 )
+patch_margin_left = 145
+patch_margin_top = 116
+patch_margin_right = 118
+patch_margin_bottom = 121
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[connection signal="area_entered" from="." to="." method="_on_Node2D_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_Node2D_area_exited"]
+[connection signal="body_entered" from="." to="." method="_on_Node2D_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_Node2D_body_exited"]

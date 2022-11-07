@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Skins/sheep_theme.tres" type="Theme" id=2]
+[ext_resource path="res://Component/CollectItem.gd" type="Script" id=3]
+
+[node name="PanelSheepA" type="PanelContainer"]
+margin_left = -32.0
+margin_top = -32.0
+margin_right = 32.0
+margin_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_pivot_offset = Vector2( 32, 32 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 2 )
+script = ExtResource( 3 )
+
+[node name="Texture" type="TextureRect" parent="."]
+margin_left = 30.0
+margin_top = 30.0
+margin_right = 34.0
+margin_bottom = 34.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 2 )
+expand = true
+stretch_mode = 6
+
+[connection signal="mouse_entered" from="." to="." method="_on_PanelSheepA_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_PanelSheepA_mouse_exited"]
