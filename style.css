@@ -51,14 +51,14 @@ a:hover {
 	width:260px;
 	padding-right:75px;
 	margin-right:25px;
-	background:url(../images/arrow.png) right center no-repeat;
+	background:url(images/arrow.png) right center no-repeat;
 }
 .col-2 {
 	float:left;
 	width:270px;
 	padding-right:65px;
 	margin-right:10px;
-	background:url(../images/arrow.png) right center no-repeat;
+	background:url(images/arrow.png) right center no-repeat;
 }
 .col-3 {
 	float:left;
@@ -193,7 +193,7 @@ p {
 /*********************************header*************************************/
 header {
 	width:100%;
-	background:url(../images/header-tail.gif) center top repeat-x #fff;
+	background:url(images/header-tail.gif) center top repeat-x #fff;
 	position:relative;
 	z-index:2;
 }
@@ -210,7 +210,7 @@ h1 a {
 	width:340px;
 	height:49px;
 	text-indent:-9999em;
-	background:url(../images/logo.png) 0 0 no-repeat;
+	background:url(images/logo.png) 0 0 no-repeat;
 }
 /***** slider *****/
 .slider-wrapper {
@@ -218,10 +218,10 @@ h1 a {
 	position:relative;
 	overflow:hidden;
 	padding-top:49px;
-	background:url(../images/slider-bg-tail2.gif) center top repeat-x #efefef;
+	background:url(images/slider-bg-tail2.gif) center top repeat-x #efefef;
 }
 #page1 .slider-wrapper {
-	background:url(../images/slider-bg-tail.gif) center top repeat-x #efefef;
+	background:url(images/slider-bg-tail.gif) center top repeat-x #efefef;
 	padding:0;
 }
 .slider {
@@ -235,13 +235,13 @@ h1 a {
 	height:768px;
 }
 #page2 .slider {
-	background:url(../images/slider-img1.jpg) 0 -171px no-repeat;
+	background:url(images/slider-img1.jpg) 0 -171px no-repeat;
 }
 #page3 .slider {
-	background:url(../images/slider-img2.jpg) 0 -154px no-repeat;
+	background:url(images/slider-img2.jpg) 0 -154px no-repeat;
 }
 #page4 .slider, #page5 .slider {
-	background:url(../images/slider-img3.jpg) 0 -183px no-repeat;
+	background:url(images/slider-img3.jpg) 0 -183px no-repeat;
 }
 .items {
 	display:none;
@@ -260,7 +260,7 @@ h1 a {
 	display:block;
 	width:20px;
 	height:20px;
-	background:url(../images/slider-pagination.png) right top no-repeat;
+	background:url(images/slider-pagination.png) right top no-repeat;
 	cursor:pointer;
 }
 .pagination li.current a, .pagination li a:hover {
@@ -280,7 +280,7 @@ h1 a {
 }
 #page1 .banner {
 	top:137px;
-	background:url(../images/banner-tail.gif) 0 0 repeat-x;
+	background:url(images/banner-tail.gif) 0 0 repeat-x;
 }
 .banner > strong {
 	display:block;
@@ -376,7 +376,7 @@ h6 {
 .button {
 	display:inline-block;
 	padding-bottom:5px;
-	background:url(../images/button-shadow.gif) center bottom no-repeat;
+	background:url(images/button-shadow.gif) center bottom no-repeat;
 	cursor:pointer;
 }
 .button a {
@@ -388,14 +388,14 @@ h6 {
 	font-weight:bold;
 	text-transform:uppercase;
 	color:#fff;
-	background:url(../images/button-tail.gif) 0 0 repeat-x #800000;
+	background:url(images/button-tail.gif) 0 0 repeat-x #800000;
 	border-radius:22px;
 	cursor:pointer;
 }
 .button a strong {
 	display:inline-block;
 	padding:0 40px 0 10px;
-	background:url(../images/button-marker.gif) right 7px no-repeat;
+	background:url(images/button-marker.gif) right 7px no-repeat;
 }
 .button a:hover {
 	color:#000;
@@ -403,7 +403,7 @@ h6 {
 .button-2 {
 	display:inline-block;
 	padding-bottom:5px;
-	background:url(../images/button2-shadow.png) center bottom no-repeat;
+	background:url(images/button2-shadow.png) center bottom no-repeat;
 	cursor:pointer;
 }
 .button-2 a {
@@ -415,14 +415,14 @@ h6 {
 	font-weight:bold;
 	text-transform:uppercase;
 	color:#fff;
-	background:url(../images/button2-tail.gif) 0 0 repeat-x #010101;
+	background:url(images/button2-tail.gif) 0 0 repeat-x #010101;
 	border-radius:22px;
 	cursor:pointer;
 }
 .button-2 a strong {
 	display:inline-block;
 	padding:0 50px 0 20px;
-	background:url(../images/marker-2.png) right 7px no-repeat;
+	background:url(images/marker-2.png) right 7px no-repeat;
 }
 .button-2 a:hover {
 	background:#010101
@@ -434,7 +434,7 @@ h6 {
 	color:#808080;
 	text-transform:uppercase;
 	border:1px solid #fff;
-	background:url(../images/time-tail.gif) 0 0 repeat-x #f2f2f2;
+	background:url(images/time-tail.gif) 0 0 repeat-x #f2f2f2;
 	border-radius:20px;
 	box-shadow: 0 0 4px #ccc;
 	-moz-box-shadow: 0 0 3px #ccc;
@@ -452,7 +452,7 @@ h6 {
 .list-1 li {
 	line-height:20px;
 	padding:2px 0 3px 12px;
-	background:url(../images/marker-1.gif) 0 8px no-repeat;
+	background:url(images/marker-1.gif) 0 8px no-repeat;
 }
 .list-1 li a {
 	display:inline-block;
@@ -465,7 +465,7 @@ h6 {
 .list-2 li {
 	line-height:20px;
 	padding:5px 0 5px 20px;
-	background:url(../images/marker-3.png) 0 11px no-repeat;
+	background:url(images/marker-3.png) 0 11px no-repeat;
 }
 .list-2 li a {
 	display:inline-block;
@@ -519,7 +519,7 @@ blockquote {
 	line-height:25px;
 	margin-bottom:2px;
 	color:#4d4d4d;
-	background:url(../images/quote-bot.png) left bottom no-repeat;
+	background:url(images/quote-bot.png) left bottom no-repeat;
 }
 .quote {
 	width:100%;

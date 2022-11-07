@@ -357,7 +357,7 @@
 				var tmp
 				_.banners[i]=(tmp=$('.'+_.bannerCl,this)).length?tmp.css({zIndex:999}):false
 			})
-			_.bannerShow(_.banner=_.banners[_.show].appendTo(_.me),_)
+			//_.bannerShow(_.banner=_.banners[_.show].appendTo(_.me),_)
 		},
 		bannerDuration:1000,
 		bannerEasing:'swing',
