@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Levels/Level.gd" type="Script" id=1]
 [ext_resource path="res://Actors/SheepG.tscn" type="PackedScene" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://Component/DescPanel.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Actors/SheepH.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Actors/SheepJ.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Actors/SheepF.tscn" type="PackedScene" id=14]
 
 [sub_resource type="Curve" id=1]
 _data = [ Vector2( 0, 0.261364 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
@@ -211,6 +212,9 @@ position = Vector2( -488, 232 )
 
 [node name="Node2D" parent="Actors" instance=ExtResource( 10 )]
 position = Vector2( 464, -40 )
+
+[node name="Node2D4" parent="Actors" instance=ExtResource( 14 )]
+position = Vector2( -32, -400 )
 
 [node name="panelNewActor" parent="." instance=ExtResource( 11 )]
 position = Vector2( 0, -1280 )

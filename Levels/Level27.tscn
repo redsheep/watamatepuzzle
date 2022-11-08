@@ -86,9 +86,6 @@ position = Vector2( -136, 32 )
 [node name="Node2D18" parent="Boxes" instance=ExtResource( 3 )]
 position = Vector2( 120, -32 )
 
-[node name="Node2D19" parent="Boxes" instance=ExtResource( 3 )]
-position = Vector2( -72, 160 )
-
 [node name="Node2D20" parent="Boxes" instance=ExtResource( 3 )]
 position = Vector2( -200, -32 )
 

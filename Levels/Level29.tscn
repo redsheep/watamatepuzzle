@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Levels/Level.gd" type="Script" id=1]
 [ext_resource path="res://Actors/SheepL.tscn" type="PackedScene" id=2]
@@ -9,7 +9,6 @@
 [ext_resource path="res://Component/Backgroud.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Images/star.png" type="Texture" id=8]
 [ext_resource path="res://Actors/SheepE.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Actors/SheepB.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Actors/SheepK.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Actors/SheepJ.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Actors/SheepF.tscn" type="PackedScene" id=14]
@@ -240,17 +239,20 @@ position = Vector2( -224, 32 )
 
 [node name="Actors" type="Node" parent="."]
 
+[node name="Node2D" parent="Actors" instance=ExtResource( 9 )]
+position = Vector2( -528, -88 )
+
 [node name="Node2D3" parent="Actors" instance=ExtResource( 4 )]
-position = Vector2( -376, -424 )
+position = Vector2( 216, -424 )
 
 [node name="Node2D6" parent="Actors" instance=ExtResource( 13 )]
 position = Vector2( 512, -120 )
 
 [node name="Node2D5" parent="Actors" instance=ExtResource( 2 )]
-position = Vector2( 496, -376 )
+position = Vector2( 504, -368 )
 
 [node name="Node2D8" parent="Actors" instance=ExtResource( 14 )]
-position = Vector2( -560, -280 )
+position = Vector2( -160, -440 )
 
 [node name="Node2D7" parent="Actors" instance=ExtResource( 11 )]
 position = Vector2( 520, 208 )
@@ -258,11 +260,8 @@ position = Vector2( 520, 208 )
 [node name="Node2D9" parent="Actors" instance=ExtResource( 11 )]
 position = Vector2( -528, 216 )
 
-[node name="Node2D" parent="Actors" instance=ExtResource( 9 )]
-position = Vector2( -536, -48 )
-
-[node name="Node2D2" parent="Actors" instance=ExtResource( 10 )]
-position = Vector2( 184, -424 )
+[node name="Node2D10" parent="Actors" instance=ExtResource( 2 )]
+position = Vector2( -568, -368 )
 
 [connection signal="button_reset_pressed" from="Backgroud" to="." method="_on_Backgroud_button_reset_pressed"]
 [connection signal="button_return_pressed" from="Backgroud" to="." method="_on_Backgroud_button_return_pressed"]

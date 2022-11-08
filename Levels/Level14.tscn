@@ -40,7 +40,7 @@ hue_variation = 0.38
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
-Level = 12
+Level = 14
 
 [node name="Backgroud" parent="." instance=ExtResource( 7 )]
 

@@ -10,8 +10,8 @@ z_index = 299
 script = ExtResource( 2 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_left = -970.0
-margin_top = -530.0
+margin_left = -995.0
+margin_top = -555.0
 margin_right = 986.0
 margin_bottom = 544.0
 rect_pivot_offset = Vector2( 968, 528 )
